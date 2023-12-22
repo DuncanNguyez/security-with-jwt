@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.duncan</groupId>
-	<artifactId>sercurity-with-jwt</artifactId>
+	<artifactId>security-with-jwt</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>security-with-jwt</name>
 	<description>Demo project for Spring Boot</description>

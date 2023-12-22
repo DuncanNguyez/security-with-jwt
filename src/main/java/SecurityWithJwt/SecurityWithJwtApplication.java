@@ -2,12 +2,12 @@ package SecurityWithJwt;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @SpringBootApplication
-public class SercurityWithJwtApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(SercurityWithJwtApplication.class, args);
-	}
-
+@EnableJpaAuditing
+public class SecurityWithJwtApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(SecurityWithJwtApplication.class, args);
+    }
 }
