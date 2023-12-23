@@ -16,7 +16,6 @@ import org.springframework.security.web.authentication.logout.LogoutHandler;
 
 @Configuration
 @EnableWebSecurity
-@EnableMethodSecurity
 public class SecurityConfiguration {
     private static final String[] WHITE_LIST_URL = {
             "/api/v1/auth/**",
@@ -59,6 +58,8 @@ public class SecurityConfiguration {
                         req -> req
                                 .requestMatchers(WHITE_LIST_URL)
                                 .permitAll()
+                                .anyRequest()
+                                .authenticated()
                 )
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
                 .sessionManagement(ss -> ss.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
